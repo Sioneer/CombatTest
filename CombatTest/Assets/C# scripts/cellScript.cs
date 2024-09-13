@@ -16,7 +16,6 @@ public class cellScript : MonoBehaviour
     void OnTriggerEnter2D (Collider2D other)
     {
         CanMoveHere = true;
-        
     }
     void OnTriggerExit2D(Collider2D other)
     {

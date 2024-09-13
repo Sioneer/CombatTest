@@ -5,13 +5,16 @@ using UnityEngine;
 public class Flag : MonoBehaviour
 {
     public Transform ResetPos;
+    public GameObject player;
     public float speed;
-    public void Update()
+    public void DestroyMe()
     {
-        transform.position = Vector2.MoveTowards(transform.position, ResetPos.position, speed*Time.deltaTime);
+        Destroy(gameObject);
     }
-    public void GiveMePos(Transform Pos1)
+    public void BringPlayerBack()
     {
-        ResetPos = Pos1;
+        player = GameObject.FindWithTag("Player");
+        Playermove playermove = player.GetComponent<Playermove>();
+        playermove.Movement(ResetPos);
     }
 }

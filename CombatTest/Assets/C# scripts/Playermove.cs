@@ -37,8 +37,16 @@ public class Playermove : MonoBehaviour
     }
     public void MovesUpdate()
     {
+        Flag = GameObject.FindWithTag("flag");
         Flag flag = Flag.GetComponent<Flag>();
-        flag.GiveMePos(Pos1);
+        flag.DestroyMe();
+        Instantiate(Flag, Pos1.position, Pos1.rotation);
+    }
+    public void BringMeBack()
+    {
+        Flag = GameObject.FindWithTag("flag");
+        Flag flag = Flag.GetComponent<Flag>();
+        flag.BringPlayerBack();
     }
 
 }
