@@ -16,5 +16,6 @@ public class Flag : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         Playermove playermove = player.GetComponent<Playermove>();
         playermove.Movement(ResetPos);
+        playermove.AllUpdate();
     }
 }

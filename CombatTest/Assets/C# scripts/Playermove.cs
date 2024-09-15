@@ -8,11 +8,13 @@ public class Playermove : MonoBehaviour
 {
     //Параметры
     public int PlayerMovesLeft = 7;
+    public int maxMoves;
     public Transform Pos1;
     public float speed = 5;
     public GameObject Flag;
 
     //Мувмент
+    
     public void Start()
     {
         Instantiate(Flag, Pos1.position, Pos1.rotation); 
@@ -48,5 +50,9 @@ public class Playermove : MonoBehaviour
         Flag flag = Flag.GetComponent<Flag>();
         flag.BringPlayerBack();
     }
-
+    //Апдейт
+    public void AllUpdate()
+    {
+        PlayerMovesLeft = maxMoves;
+    }
 }
