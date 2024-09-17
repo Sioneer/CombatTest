@@ -6,7 +6,6 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     public bool[] isFull;
-    public GameObject sin_shluhi;
     public GameObject[] slots;
     public GameObject[] items;
 

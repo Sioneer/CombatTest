@@ -579,7 +579,6 @@ RectTransform:
   - {fileID: 971204269}
   - {fileID: 1318339783}
   - {fileID: 226959900}
-  - {fileID: 651477092}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1213,9 +1212,10 @@ GameObject:
   - component: {fileID: 386413102}
   - component: {fileID: 386413101}
   - component: {fileID: 386413100}
+  - component: {fileID: 386413104}
   m_Layer: 0
   m_Name: Capsule (2)
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1335,6 +1335,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &386413104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386413099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fe5f704d38af24c83be0626bc2a06d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 0
+  Protection: 0
+  MoveDistance: 0
 --- !u!224 &416876102 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 349035839966919359, guid: 1476fa671d0fdee4799b15bb4d8ef56c, type: 3}
@@ -1846,9 +1861,10 @@ GameObject:
   - component: {fileID: 644259746}
   - component: {fileID: 644259745}
   - component: {fileID: 644259744}
+  - component: {fileID: 644259748}
   m_Layer: 0
   m_Name: Capsule (3)
-  m_TagString: Untagged
+  m_TagString: Armor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1968,81 +1984,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &651477091
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 651477092}
-  - component: {fileID: 651477094}
-  - component: {fileID: 651477093}
-  m_Layer: 5
-  m_Name: Image
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &651477092
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 651477091}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 181920777}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -403, y: -385}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &651477093
+--- !u!114 &644259748
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 651477091}
+  m_GameObject: {fileID: 644259743}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Script: {fileID: 11500000, guid: 45fe5f704d38af24c83be0626bc2a06d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &651477094
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 651477091}
-  m_CullTransparentMesh: 1
+  Damage: 0
+  Protection: 0
+  MoveDistance: 0
 --- !u!224 &655748803 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 349035839966919359, guid: 1476fa671d0fdee4799b15bb4d8ef56c, type: 3}
@@ -2848,9 +2804,10 @@ GameObject:
   - component: {fileID: 1070988212}
   - component: {fileID: 1070988211}
   - component: {fileID: 1070988210}
+  - component: {fileID: 1070988214}
   m_Layer: 0
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2970,6 +2927,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1070988214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070988209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fe5f704d38af24c83be0626bc2a06d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 52
+  Protection: 52
+  MoveDistance: 52
 --- !u!224 &1290525296 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 349035839966919359, guid: 1476fa671d0fdee4799b15bb4d8ef56c, type: 3}
@@ -3532,10 +3504,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxDamage: 0
   maxMoves: 12
-  maxDefence: 0
-  BonusDamage: 0
-  BonusMoves: 0
-  BonusDefence: 0
+  maxProtection: 0
   PlayerMovesLeft: 43
   Pos1: {fileID: 1032744189}
   speed: 5
@@ -3589,13 +3558,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFull: 00000000
-  sin_shluhi: {fileID: 0}
   slots:
-  - {fileID: 651477091}
+  - {fileID: 673372875}
   - {fileID: 971204268}
   - {fileID: 1318339782}
   - {fileID: 226959899}
-  items: []
+  items:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1530195169
 GameObject:
   m_ObjectHideFlags: 0
@@ -3608,9 +3582,10 @@ GameObject:
   - component: {fileID: 1530195172}
   - component: {fileID: 1530195171}
   - component: {fileID: 1530195170}
+  - component: {fileID: 1530195174}
   m_Layer: 0
   m_Name: Capsule (1)
-  m_TagString: Untagged
+  m_TagString: Armor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3730,6 +3705,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1530195174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530195169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fe5f704d38af24c83be0626bc2a06d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 106
+  Protection: 195
+  MoveDistance: 145
 --- !u!1001 &1575770606
 PrefabInstance:
   m_ObjectHideFlags: 0

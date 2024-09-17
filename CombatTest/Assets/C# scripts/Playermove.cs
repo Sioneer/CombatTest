@@ -8,12 +8,8 @@ public class Playermove : MonoBehaviour
 {
     //Параметры
     public int maxDamage;
-    public int maxMoves;
-    public int maxDefence;
-
-    public int BonusDamage;
-    public int BonusMoves;
-    public int BonusDefence;
+    public int maxMoves = 7;
+    public int maxProtection;
 
 
     public int PlayerMovesLeft = 7;
@@ -35,9 +31,9 @@ public class Playermove : MonoBehaviour
     }
     public void Minus()
     {
-        if(PlayerMovesLeft>=0)
+        if(maxMoves>=0)
         {
-            PlayerMovesLeft--;
+            maxMoves--;
         }
     }
     /*
@@ -52,7 +48,7 @@ public class Playermove : MonoBehaviour
     public void Update()
     {
         
-        if(PlayerMovesLeft>=0)
+        if(maxMoves>=0)
         {
             transform.position = Vector2.MoveTowards(transform.position, Pos1.position, speed*Time.deltaTime);
         }
@@ -74,5 +70,15 @@ public class Playermove : MonoBehaviour
     public void AllUpdate()
     {
         PlayerMovesLeft = maxMoves;
+    }
+    public void AddStats(int damage, int protection, int move){
+        maxDamage += damage;
+        maxProtection += protection;
+        maxMoves += move;
+    }
+    public void SubStats(int damage, int protection, int move){
+        maxDamage -= damage;
+        maxProtection -= protection;
+        maxMoves -= move;
     }
 }
